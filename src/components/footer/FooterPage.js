@@ -8,7 +8,7 @@ export const Footer = () => {
     <div className="main-footer">
       <div className="container">
         <h3>
-          <a href="">Browse Quiz</a>
+          <Link to="/admin">Browse Quiz</Link>
         </h3>
       </div>
     </div>
