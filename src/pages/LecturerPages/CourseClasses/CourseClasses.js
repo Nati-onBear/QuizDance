@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCertificate, faChartBar, faInfoCircle, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { Button, Table } from 'react-bootstrap'
 
 import Header from '../../../components/Lecturer/Header/Header'
@@ -64,10 +65,10 @@ class CourseClasses extends Component {
                       <td>{aclass.endPeriod}</td>
                       <td>{aclass.status ? 'Okay' : 'Not Okay'}</td>
                       <td className='d-flex justify-content-around'>
-                        <Button variant='primary'>Details<FontAwesomeIcon icon='chart-bar' /></Button>
-                        <Button variant='primary'>Sessions</Button>
-                        <Button variant='primary'>Reports</Button>
-                        <Button variant='danger'>Archive<FontAwesomeIcon icon='trash' /></Button>
+                        <Button variant='primary'><FontAwesomeIcon icon={faInfoCircle} /></Button>
+                        <Button variant='primary'><FontAwesomeIcon icon={faCertificate} /></Button>
+                        <Button variant='primary'><FontAwesomeIcon icon={faChartBar} /></Button>
+                        <Button variant='danger'><FontAwesomeIcon icon={faTrash} /></Button>
                       </td>
                     </tr>
                   ))
