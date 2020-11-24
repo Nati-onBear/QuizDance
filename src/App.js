@@ -23,7 +23,7 @@ function App() {
                 <Switch>
                   <Route path="/" exact component={Homepage} />
                   <Route path="/admin/classes" exact component={CourseClasses} />
-                  <Redirect to='/'/>
+                  <Redirect to='/admin/classes'/>
                 </Switch>
               </Router>
             </div>
