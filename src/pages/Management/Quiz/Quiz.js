@@ -3,26 +3,23 @@ import QRCode from "qrcode.react";
 //import axios from "axios";
 import { useParams } from "react-router-dom";
 
-import "../../Homepage.scss";
+import "./Quiz.scss";
 
-export const Quiz = () => {
+const Quiz = () => {
   const { quizId } = useParams()
   return (
-    <div className="Homepage" style={{ width: "1277px" }}>
-      <div className="context" style={{ top: "10vh", width: "1277px" }}>
+    <div className="Homepage">
+      <div className="context" style={{ top: "10vh" }}>
         <div className="enterForm">
           <Fragment>
             <h2>Scan this</h2>
             <QRCode
-              value={`https://spm-project-30b55.web.app/`}
+              value={`https://quizdance-spm8.web.app/${quizId}`}
               includeMargin
               size={300}
             />
             <h2>
-              Or join
-              <a href="https://spm-project-30b55.web.app/">
-                https://spm-project-30b55.web.app/
-              </a>
+              Or join <a href="/">quizdance-spm8.web.app</a>
             </h2>
             <h2>and enter the game ID</h2>
             <h2>
@@ -48,3 +45,5 @@ export const Quiz = () => {
     </div>
   );
 };
+
+export default Quiz;
